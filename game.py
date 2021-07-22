@@ -25,7 +25,7 @@ ground_scroll = 0
 scroll_speed = 4 
 flying = False
 game_over = False
-pipe_gap = 120
+
 pipe_frequency = 1200 # milliseconds
 last_pipe = pygame.time.get_ticks() - pipe_frequency
 score = 0
@@ -106,6 +106,10 @@ class Pipe(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load('img/pipe.png')
         self.rect = self.image.get_rect()
+        if score<30:
+            pipe_gap=random.randint(200,200+score)
+        else:
+            pipe_gap=random.randint(100,140)
         #postion 1 is from top, -1 id from bottom
         if position == 1:
             self.image = pygame.transform.flip(self.image, False, True)
@@ -200,8 +204,8 @@ while run:
         time_now = pygame.time.get_ticks()
         if time_now - last_pipe > pipe_frequency:
             pipe_height = random.randint(-80, 80)
-            btm_pipe = Pipe(screen_width, int(screen_height / 2) + pipe_height, -1)
-            top_pipe = Pipe(screen_width, int(screen_height / 2) + pipe_height, 1)
+            btm_pipe = Pipe(screen_width, int(screen_height / 4) + pipe_height, -1)
+            top_pipe = Pipe(screen_width, int(screen_height / 4) + pipe_height, 1)
             pipe_group.add(btm_pipe)
             pipe_group.add(top_pipe)
             last_pipe = time_now
