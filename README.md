@@ -14,8 +14,13 @@ The bird falls down due to gravity, we need to control the bird by using space o
 If the player anytime touches the ground or touches any pipes game is over and it restarts again.
 * Home page:
 On either clicking mouse or pressing space the game starts
+
 ![](/img/home.jpg)
-During the game the bird needs to go through pipes
-![](/images/homepage.jpg)
-On Colliding the restart button appears
-![](/images/page_restart.jpg)
+
+*During the game the bird needs to go through pipes
+
+![](/images/gamepage.jpg)
+
+*On Colliding the restart button appears
+
+![](/images/restartpage.jpg)
