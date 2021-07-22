@@ -19,8 +19,8 @@ On either clicking mouse or pressing space the game starts
 
 *During the game the bird needs to go through pipes
 
-![](/images/gamepage.jpg)
+![](/img/gamepage.jpg)
 
 *On Colliding the restart button appears
 
-![](/images/restartpage.jpg)
+![](/img/restartpage.jpg)
